@@ -22,14 +22,24 @@ interface ProductDict {
     interested: string;
     recommended: string;
     items: ProductItem[];
-    leadModal: any; 
+}
+
+interface LeadModalDict {
+    title: string;
+    description: string;
+    name: string;
+    phone: string;
+    message: string;
+    cancel: string;
+    submit: string;
 }
 
 interface ClientProductGridProps {
     dict: ProductDict;
+    leadModalDict: LeadModalDict;
 }
 
-export function ClientProductGrid({ dict }: ClientProductGridProps) {
+export function ClientProductGrid({ dict, leadModalDict }: ClientProductGridProps) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedPlan, setSelectedPlan] = useState("");
 
@@ -75,8 +85,7 @@ export function ClientProductGrid({ dict }: ClientProductGridProps) {
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
         selectedPlan={selectedPlan}
-        // @ts-ignore
-        dict={dict.leadModal}
+        dict={leadModalDict}
       />
     </>
   );

@@ -6,8 +6,9 @@ import { RecruitmentForm } from "@/components/RecruitmentForm";
 import { getDictionary } from "@/lib/dictionary";
 import type { Locale } from "@/i18n-config";
 
-export default async function Home({ params }: { params: Promise<{ lang: Locale }> }) {
-  const { lang } = await params;
+export default async function Home({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang: langParam } = await params;
+  const lang = langParam as Locale;
   const dict = await getDictionary(lang);
 
   return (
@@ -24,7 +25,7 @@ export default async function Home({ params }: { params: Promise<{ lang: Locale 
              </p>
          </div>
         
-        <ClientProductGrid dict={dict.products} />
+        <ClientProductGrid dict={dict.products} leadModalDict={dict.leadModal} />
       </section>
 
       {/* Recruitment Section */}
