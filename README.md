@@ -1,36 +1,87 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Professional Insurance Agent Profile Template
 
-## Getting Started
+A clean, modern, and "plug and play" web portfolio template designed for insurance agents and financial advisors. Built with **Next.js**, **Tailwind CSS**, and **TypeScript**.
 
-First, run the development server:
+## 🚀 Getting Started (Plug and Play)
+
+Follow these simple steps to make this website your own.
+
+### 1. Clone & Install
+
+```bash
+git clone https://github.com/your-username/insu-profile.git
+cd insu-profile
+npm install
+```
+
+### 2. Configure Your Profile (Crucial Step!)
+
+Open `src/config/site.ts` and update your personal information. This single file controls your name, contact details, and social links across the entire site.
+
+```typescript
+// src/config/site.ts
+export const siteConfig = {
+  name: "Your Name", // e.g. "Agent Somchai"
+  contact: {
+    email: "your.email@example.com",
+    phone: "081-XXX-XXXX",
+    lineId: "@your.line.id",
+    // ...
+  },
+  // ...
+};
+```
+
+### 3. Run Locally
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to see your changes instantly.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠️ Customization Guide
 
-## Learn More
+### Changing Content & Text
 
-To learn more about Next.js, take a look at the following resources:
+The text content is separated into "Locales" for easy editing and translation.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **English**: Edit `src/locales/en.ts`
+- **Thai**: Edit `src/locales/th.ts`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+These files contain the text for the Hero section, Products, Recruitment, etc.
 
-## Deploy on Vercel
+### Changing Images
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Place your images in the `public/` folder.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Replace `profile.jpg` (or similar) with your own photo.
+- Update image references in `src/app/[lang]/page.tsx` or components if filenames change.
+
+### Adding/Removing Products
+
+Edit the `products.items` array in `src/locales/en.ts` and `src/locales/th.ts`.
+Each item represents a card in the product display.
+
+```typescript
+// Example Product Item
+{
+  title: "New Health Plan",
+  description: "Description of your new plan...",
+  features: ["Feature 1", "Feature 2"],
+}
+```
+
+## 📦 Deployment
+
+This project is optimized for deployment on **Vercel**.
+
+1. Push your code to GitHub.
+2. Log in to Vercel and "Import Project" from GitHub.
+3. Deploy!
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).

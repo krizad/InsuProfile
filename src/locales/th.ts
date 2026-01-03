@@ -1,3 +1,4 @@
+import { siteConfig } from "@/config/site";
 import { Dictionary } from "./en";
 
 export const th: Dictionary = {
@@ -10,7 +11,7 @@ export const th: Dictionary = {
   hero: {
     tagline: "ตัวแทนประกันชีวิตผู้ได้รับใบอนุญาต",
     greeting: "สวัสดีค่ะ, ฉันคือ",
-    name: "ตัวแทนซาร่า",
+    name: siteConfig.name,
     description: "มุ่งมั่นดูแลอนาคตของคุณและครอบครัว ด้วยประสบการณ์กว่า 10 ปี เราพร้อมมอบคำแนะนำด้านการประกันชีวิตและการออมเงิน พร้อมโอกาสในการสร้างรายได้ที่มั่นคง",
     consult: "ปรึกษาฟรี",
     viewPlans: "ดูแผนประกัน"
@@ -75,7 +76,7 @@ export const th: Dictionary = {
   },
   leadModal: {
     title: "สนใจ",
-    description: "กรอกข้อมูลด้านล่าง แล้วทางเราจะติดต่อกลับไปพร้อมข้อเสนอพิเศษ",
+    description: `กรอกข้อมูลด้านล่าง แล้วทางเราจะติดต่อกลับไปพร้อมข้อเสนอพิเศษ หรือติดต่อที่ ${siteConfig.contact.lineId}`,
     name: "ชื่อของคุณ",
     phone: "เบอร์โทรศัพท์",
     message: "ข้อความเพิ่มเติม (ไม่บังคับ)",
@@ -88,6 +89,6 @@ export const th: Dictionary = {
     quickLinks: "เมนูลัด",
     followMe: "ติดตามเรา",
     rights: "สงวนลิขสิทธิ์",
-    inspiration: "แรงบันดาลใจการออกแบบจาก เมืองไทยประกันชีวิต"
+    inspiration: "แรงบันดาลใจการออกแบบจาก บริษัทประกันชั้นนำ"
   }
 };

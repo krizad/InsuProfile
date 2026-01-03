@@ -8,6 +8,8 @@ import { Footer } from "@/components/Footer";
 import type { Locale } from "@/i18n-config";
 import { i18n } from "@/i18n-config";
 
+import { siteConfig } from "@/config/site";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -19,8 +21,14 @@ const geistMono = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "Insurance Agent Portfolio",
-  description: "Trusted life insurance agent providing health, savings, and protection plans.",
+  title: {
+    default: siteConfig.name,
+    template: `%s | ${siteConfig.name}`,
+  },
+  description: siteConfig.description,
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export async function generateStaticParams() {

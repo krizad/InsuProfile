@@ -1,3 +1,5 @@
+import { siteConfig } from "@/config/site";
+
 export const en = {
   navbar: {
     about: "About Me",
@@ -8,7 +10,7 @@ export const en = {
   hero: {
     tagline: "Authorized Life Insurance Agent",
     greeting: "Hi, I'm",
-    name: "Agent Sarah",
+    name: siteConfig.name,
     description: "Dedicated to protecting your future and your family's. With over 10 years of experience, I provide personalized insurance solutions and mentorship for aspiring agents.",
     consult: "Consult for Free",
     viewPlans: "View Plans"
@@ -35,9 +37,9 @@ export const en = {
           features: ["Covers 50+ critical illnesses", "Lump sum payout upon diagnosis", "Affordable premiums", "No price increase with age (for term)"],
         },
         {
-            title: "Personal Accident Insurance",
-            description: "Protect yourself from unexpected accidents 24/7 worldwide.",
-            features: ["Medical expenses from accidents", "Income compensation during hospitalization", "No health check required, easy to apply", "Motorcycle riding coverage included"],
+          title: "Personal Accident Insurance",
+          description: "Protect yourself from unexpected accidents 24/7 worldwide.",
+          features: ["Medical expenses from accidents", "Income compensation during hospitalization", "No health check required, easy to apply", "Motorcycle riding coverage included"],
         },
         {
             title: "Retirement Plan",
@@ -73,7 +75,7 @@ export const en = {
   },
   leadModal: {
     title: "Interest in",
-    description: "Fill out the form below and I'll get back to you with a personalized quote.",
+    description: `Fill out the form below and I'll get back to you with a personalized quote or contact me at ${siteConfig.contact.lineId}`,
     name: "Name",
     phone: "Phone Number",
     message: "Message (Optional)",
@@ -81,12 +83,12 @@ export const en = {
     submit: "Submit Request"
   },
   footer: {
-    tagline: "Providing reliable insurance coverage and career opportunities since 2015.",
+    tagline: "Providing reliable insurance coverage and career opportunities.",
     contact: "Contact",
     quickLinks: "Quick Links",
     followMe: "Follow Me",
     rights: "All rights reserved.",
-    inspiration: "Based on Muang Thai Life Assurance inspiration."
+    inspiration: "Inspired by Leading Insurance Providers."
   }
 };
 
